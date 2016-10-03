@@ -1,7 +1,7 @@
 var MPAN = require('./dist/mpan').default;
 
 module.exports.parse = function(mpan) {
-  const number = mpan.replace(/^S/, '');
+  var number = mpan.replace(/^S/, '');
 
   if (number.length === 21) {
     return MPAN.fromString(number);
